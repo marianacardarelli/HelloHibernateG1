@@ -9,12 +9,16 @@
         <property name="hibernate.connection.username">user</property>
         <property name="hibernate.connection.password">pwd</property>
       <!--  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
-
+        <!-- cambiar validate por update para que se actualicen las columnas-->
         <property name="hibernate.hbm2ddl.auto">validate</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.current_session_context_class">
+            thread
+        </property>
 
 
         <mapping class="org.example.models.Equipo"/>
+        <mapping class="org.example.models.Compra"/>
     </session-factory>
 </hibernate-configuration>
